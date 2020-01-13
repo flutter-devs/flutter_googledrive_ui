@@ -1,11 +1,11 @@
 import 'dart:async';
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:google_drive_proj/Constants/constants.dart';
 import 'package:google_drive_proj/model/dropbox.dart';
 import 'package:google_drive_proj/model/lastfile_list.dart';
-import 'package:google_drive_proj/second_page.dart';
+import 'package:google_drive_proj/screen/second_page.dart';
+import 'package:google_drive_proj/widget/circular_progress_indicator.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:percent_indicator/linear_percent_indicator.dart';
 
@@ -305,32 +305,15 @@ class _GoogleDriveState extends State<GoogleDrive> {
               ),
               subtitle: Text(item.subTitle,style: TextStyle(color: Colors.white70,fontSize:10.0)),
               trailing: InkWell(
-                child: item.isProgressBar?showProgressBar(context):Container(
+                child: item.isProgressBar?ProgressBar():Container(
                   height:_height/10.0,
                   width: _width/12.0,
-                  //color: Colors.white,
+                 // color: Colors.white,
                   child: _selectIndex!=null?_selectIndex:Image.asset(item.iconImg),
                 ),
                 onTap: (){
                   setState(() {
                     item.isProgressBar = !item.isProgressBar;
-
-                    /* Timer timer;
- timer = Timer.periodic(Duration(milliseconds:20),(_){
- print('Percent Update');
-
- setState(() {
- percent+=5;
- if(percent >= 100){
- timer.cancel();
- percent=0;
- *//*Navigator.push(
- context,
- MaterialPageRoute(builder: (context) => GoogleDrive()),
- );*//*
- }
- });
- });*/
                   });
                 },
               ),
@@ -341,7 +324,7 @@ class _GoogleDriveState extends State<GoogleDrive> {
     );
   }
 
-  Widget showProgressBar(BuildContext context) {
+/*  Widget showProgressBar(BuildContext context) {
     return Container(
       height:50,
       width: 25,
@@ -362,6 +345,6 @@ class _GoogleDriveState extends State<GoogleDrive> {
         backgroundColor: Colors.white,
       ),
     );
-  }
+  }*/
 
 }

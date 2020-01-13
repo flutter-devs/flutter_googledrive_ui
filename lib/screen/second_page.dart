@@ -3,6 +3,7 @@ import 'package:google_drive_proj/Constants/constants.dart';
 import 'package:google_drive_proj/model/files_image.dart';
 import 'package:google_drive_proj/model/folders.dart';
 import 'package:google_drive_proj/model/lastfile_list.dart';
+import 'package:google_drive_proj/widget/circular_progress_indicator.dart';
 class SecondPage extends StatefulWidget {
   @override
   _SecondPageState createState() => _SecondPageState();
@@ -11,6 +12,8 @@ class SecondPage extends StatefulWidget {
 class _SecondPageState extends State<SecondPage> {
   double _height;
   double _width;
+
+  int _selectIndex;
 
   List<Folder>folder;
   List<FileImageList>fileImageList;
@@ -351,11 +354,18 @@ class _SecondPageState extends State<SecondPage> {
                 ],
               ),
               subtitle: Text(item.subTitle,style: TextStyle(color: Colors.white70,fontSize:10.0)),
-              trailing: Container(
-                height:_height/10.0,
-                width: _width/12.0,
-                //color: Colors.white,
-                child: Image.asset(item.iconImg),
+              trailing: InkWell(
+                child: item.isProgressBar?ProgressBar():Container(
+                  height:_height/10.0,
+                  width: _width/12.0,
+                  // color: Colors.white,
+                  child: _selectIndex!=null?_selectIndex:Image.asset(item.iconImg),
+                ),
+                onTap: (){
+                  setState(() {
+                    item.isProgressBar = !item.isProgressBar;
+                  });
+                },
               ),
             ),
           ),)

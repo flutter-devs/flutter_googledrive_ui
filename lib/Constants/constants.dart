@@ -6,7 +6,12 @@ import 'package:google_drive_proj/model/folders.dart';
 import 'package:google_drive_proj/model/lastfile_list.dart';
 
 class Constants{
-  
+
+  static final String GOOGLE_DRIVE = 'GOOGLE_DRIVE';
+  static final String SECOND_PAGE = 'SECOND_PAGE';
+
+  static final String SPLASH_SCREEN = 'SPLASH_SCREEN';
+
   static List<DropBox>getDropBox(){
     return[
       new DropBox('assets/images/circle-cropped.png','DropBox'),

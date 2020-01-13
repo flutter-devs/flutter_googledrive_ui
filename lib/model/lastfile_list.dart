@@ -4,7 +4,7 @@ LastFile{
   String _title;
   String _subTitle;
   String _iconImg;
-  bool isProgressBar=false;
+  bool   isProgressBar=false;
 
   LastFile(this._img,this._title,this._subTitle,this._iconImg, this.isProgressBar);
 
