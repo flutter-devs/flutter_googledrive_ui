@@ -1,6 +1,19 @@
-# google_drive_proj
+# Flutter Flipkart UI Demo
 
-A new Flutter application.
+A sample application to show Flipkart Flutter Clone.
+
+# Demo
+<img height="480px" width="244px" src="https://github.com/flutter-devs/flutter_Flipkart_UI_clone/blob/master/screens/demo.gif">
+
+
+
+# Android Screen
+<img height="480px" src="https://github.com/flutter-devs/flutter_googledrive_ui/blob/master/screens/android1.jpg">
+
+
+# iOS Screen
+<img height="480px" src="https://github.com/flutter-devs/flutter_Flipkart_UI_clone/blob/master/screens/iphone1.png">
+
 
 ## Getting Started
 
