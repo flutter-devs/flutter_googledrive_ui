@@ -8,7 +8,7 @@ A sample application to show Flipkart Flutter Clone.
 
 
 # Android Screen
-<img height="480px" src="https://github.com/flutter-devs/flutter_googledrive_ui/blob/master/screens/android1.png">
+<img height="480px" src="https://github.com/flutter-devs/flutter_googledrive_ui/blob/flutter_google_drive/screens/android1.png">
 
 
 # iOS Screen
